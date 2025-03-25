@@ -13,7 +13,7 @@ def index():
     error = None
     if request.method == "POST":
         admission_number = request.form.get("admission_number")
-        pdf_filename = f"Report_{admission_number}.pdf"
+        pdf_filename = f"Progress_Report_{admission_number}.pdf"
         pdf_path = os.path.join(REPORTS_FOLDER, pdf_filename)
 
         if os.path.exists(pdf_path):
